@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './character-box.scss';
 
-const CharacterBox = ({ item }) => {
-  useEffect(() => {
-    console.log(item);
-  }, []);
-
+const CharacterBox = ({ item, setSelectedChar }) => {
   return (
-    <div className="char-container tooltip-char">
+    <div
+      className="char-container tooltip-char"
+      onClick={() => setSelectedChar(item)}
+    >
       <img
         className={'character-thumbnail'}
         src={item.thumbnail.path + '.' + item.thumbnail.extension}

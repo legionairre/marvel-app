@@ -1,0 +1,57 @@
+.modal-detail-container {
+  display: flex;
+  flex-direction: column;
+
+  .char-name-image-desc {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    align-items: center;
+
+    .char-thumbnail {
+      border-radius: 50%;
+    }
+  }
+}
+
+.char-comics-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.char-comics-thumbnail-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.char-comic-thumbnail {
+  border-radius: 8px;
+}
+
+.char-name-desc-container {
+  width: 100%;
+  margin: 0 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .char-name {
+    font-size: 22px;
+    font-weight: bolder;
+  }
+}
+
+.comics-head {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bolder;
+}

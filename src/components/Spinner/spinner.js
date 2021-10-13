@@ -1,11 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './spinner.scss';
 
 const Spinner = () => {
-  useEffect(() => {
-    console.log('Init');
-  }, []);
-
   return (
     <div className="spinner-container">
       <div className="circle outer-lv3">
