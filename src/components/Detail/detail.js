@@ -90,21 +90,22 @@ const Detail = ({ selectedChar, setSpinnerActive, setSelectedChar }) => {
           <div className={'comics-head'}>COMICS</div>
           <hr />
           <div className={'char-comics-container'}>
-            {charactersComics.length &&
+            {charactersComics.length ?
               charactersComics.map((item, index) => (
                 <div
-                  className={'char-comics-thumbnail-title'}
-                  key={index + '_' + item.id}
-                >
+                    className={'char-comics-thumbnail-title'}
+                    key={index + '_' + item.id}
+                  >
                   <img
-                    className={'char-comic-thumbnail'}
-                    src={item.thumbnail.path + '.' + item.thumbnail.extension}
-                    alt={'character-thumbnail-' + item.id}
-                    width="225"
-                  />
+                      className={'char-comic-thumbnail'}
+                      src={item.thumbnail.path + '.' + item.thumbnail.extension}
+                      alt={'character-thumbnail-' + item.id}
+                      width="225"
+                    />
                   <div className={'char-comic-title'}>{item.title}</div>
                 </div>
-              ))}
+                )) :
+              null}
           </div>
         </div>
       </Modal>
