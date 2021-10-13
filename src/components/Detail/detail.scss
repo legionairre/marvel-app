@@ -1,6 +1,7 @@
 .modal-detail-container {
   display: flex;
   flex-direction: column;
+  max-width: 1024px;
 
   .char-name-image-desc {
     display: flex;
@@ -11,6 +12,15 @@
 
     .char-thumbnail {
       border-radius: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .modal-detail-container {
+    .char-name-image-desc {
+      justify-content: center;
+      flex-wrap: wrap;
     }
   }
 }

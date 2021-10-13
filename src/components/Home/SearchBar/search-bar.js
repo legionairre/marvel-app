@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './search-bar.scss';
 
-const SearchBar = () => {
-  const [searchValue, setSearchValue] = useState('');
-
-  useEffect(() => {
-    console.log('Init');
-  }, []);
-
+const SearchBar = ({ searchValue, setSearchValue, search }) => {
   return (
     <div className="searchBox">
       <input
@@ -17,8 +11,13 @@ const SearchBar = () => {
         placeholder="Search your favorite character"
         value={searchValue}
         onChange={(event) => setSearchValue(event.target.value)}
+        onKeyPress={(event) => {
+          if (event.key === 'Enter') {
+            search();
+          }
+        }}
       />
-      <button className="searchButton" onClick={() => console.log(searchValue)}>
+      <button className="searchButton" onClick={() => search()}>
         <i className="material-icons">Go</i>
       </button>
     </div>

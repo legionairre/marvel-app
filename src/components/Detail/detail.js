@@ -13,7 +13,8 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     height: '600px',
-    width: '800px'
+    inset: '50% 10% 10% 50%',
+    maxWidth: '1024px'
   }
 };
 
